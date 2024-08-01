@@ -1,8 +1,5 @@
 // Write a program to find and print duplicate elements in an array.
 
-
-
-
 public class Arrays {
    public static void main(String args[]) {
     int[] arr1 = {1,2,7,2,4};
@@ -18,6 +15,7 @@ public class Arrays {
 
 }
 }
+
 // or method 2
 
 public class Arrays {
@@ -41,3 +39,50 @@ public class Arrays {
 
 }
 }
+*********************************************************************************************************************
+//Write a program to remove duplicate elements from an array.
+
+class Arrays {
+  public static void main(String[] args) {
+      int [] a = {1,2,3,4,3,2};
+      int n = a.length;
+      for (int i = 0; i < n; i++) {
+         for(int j= i+1; j<n; j++) {
+          if(a[i] == a[j]) {
+            for(int k=j; k<n-1; k++) {
+              a[k]= a[k+1];
+            }
+            n--;
+            j--;
+         }
+          
+      }
+
+  }
+  for (int i = 0; i < n; i++) {
+    System.out.print(a[i]);
+    }
+      
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
