@@ -1,0 +1,81 @@
+//Write a program to find if a number is a power of 2 or not
+
+
+import java.util.*;
+class Arrays {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+   int n = sc.nextInt();
+   int value = (n &(n-1));
+   if(value==0) {
+    System.out.println("Power of 2");
+   } else {
+    System.out.println("Not a power of 2");
+   }
+    }
+  }
+
+
+//Write a program to count the number of 1’s in a binary representation of the number.
+
+
+
+import java.util.*;
+
+class example {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enetr number");
+    int number  = sc.nextInt();
+    int count = countOnes(number);
+    System.out.println("Number of ones in the binary representation of the number is " + count);
+    }
+
+    public static int countOnes(int number) {
+        int count =0; 
+        while(number>0) {
+            number = number & (number-1);
+            count++;
+        }
+        return count;
+    }
+}
+
+
+
+// convert decimal to binary using inbuild functions
+
+import java.util.Scanner;
+
+public class DecimalToBinarySimple {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int Number = scanner.nextInt();
+        String binary = Integer.toBinaryString(Number);
+        System.out.println("binary is :" + binary);
+
+       
+    }
+}
+
+
+// convert binary to decimal using inbuild functions
+
+import java.util.Scanner;
+
+public class DecimalToBinarySimple {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        String binary = scanner.next();
+        int  decimal = Integer.parseInt(binary,2);
+        System.out.println("binary is :" + decimal);
+
+       
+    }
+}
+
+
+
+
