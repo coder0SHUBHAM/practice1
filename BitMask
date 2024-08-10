@@ -1,0 +1,58 @@
+//BitMask :
+// 1.getbit = use to find which bit in which position
+
+
+// using getbit bitMask
+
+class Arrays {
+  public static void main(String[] args) {
+   int n = 5;
+   int pos = 2;
+   int bitMask = 1<<pos;
+   if((bitMask & n)== 0) {
+    System.out.println("bit is zero");
+   } else {
+    System.out.println("bit is one");
+   }
+
+    }
+
+  }
+
+// 2.setBit
+
+// using setbit bitMask in this use "or" operation
+// use for convert 0 to 1
+
+class Arrays {
+  public static void main(String[] args) {
+   int n = 5; //0101
+   int pos = 1;
+   int bitMask = 1<<pos;
+   int newNumber = bitMask | n;  
+   System.out.println(newNumber);
+
+    }
+
+  }
+
+
+3.clearBit
+// using clearBit bitMask in this use "not" and next "&" operation
+// use for convert 1 to 0
+
+class Arrays {
+  public static void main(String[] args) {
+   int n = 5; //0101
+   int pos = 2;
+   int bitMask = 1<<pos;
+   int notBitMask= ~(bitMask);
+
+   int newNumber = notBitMask & n;  
+   System.out.println(newNumber);
+
+    }
+  }
+
+
+
