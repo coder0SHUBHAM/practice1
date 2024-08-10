@@ -1,0 +1,77 @@
+// using StringBuilder
+// use to modify string
+
+//1. setCharAt(index,char) : use to chang charcter on index
+class Arrays {
+  public static void main(String[] args) {
+      StringBuilder  sb = new StringBuilder("tony");
+      sb.setCharAt(0, 'm');
+      System.out.println(sb);
+      
+}
+}
+
+
+//insert(index,char)
+// use to add new char in string
+
+class Arrays {
+  public static void main(String[] args) {
+      StringBuilder  sb = new StringBuilder("tony");
+       sb.insert(0,'x');
+    System.out.println(sb);
+      
+}
+}
+
+
+//.delet(start index, end index)
+// use to delet char in string
+
+class Arrays {
+  public static void main(String[] args) {
+      StringBuilder  sb = new StringBuilder("tony");
+       //sb.insert(0,'x');
+       sb.delete(0,1);
+    System.out.println(sb);
+  }
+}
+
+
+//.append("char")
+// add charecter at the end
+
+
+class Arrays {
+  public static void main(String[] args) {
+      StringBuilder  sb = new StringBuilder("tony");
+      
+       sb.append("mony");  // append use to add many character in single line at the end of string, in insert() it only single char add in one line in any index
+    System.out.println(sb);
+  }
+}
+
+
+// revers the string using stringbuilder
+
+
+class Arrays {
+  public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("shubham");
+    for(int i=0; i<sb.length()/2; i++) {
+      int front = i;
+      int back = sb.length()-1-i;
+
+      char frontchar = sb.charAt(front);
+      char backchar = sb.charAt(back);
+      sb.setCharAt(front, backchar);
+      sb.setCharAt(back, frontchar);
+      }
+System.out.println(sb);
+    }
+
+  }
+
+
+
+
