@@ -1,0 +1,53 @@
+// using CharAt 
+// use to check which character at which index
+
+class Arrays {
+  public static void main(String[] args) {
+      String name = "shubham";
+      System.out.println(name.length());  
+      for(int i =0;i<name.length(); i++) {
+      System.out.println(name.charAt(i)); // charAt use for print single character 
+  }
+}
+}
+
+
+// using compareTo()
+// compare to string ( length, grater, smaller)
+
+class Arrays {
+  public static void main(String[] args) {
+      String name = "shubham";
+      String name2 = "shubham";
+      if(name.compareTo(name2)==0) {
+        System.out.println("Both strings are equal");
+      } else {
+        System.out.println("Both strings are not equal");
+      }
+}
+}
+
+// using substring()
+      // it is use to print sub(specific) part of the all string
+
+class Arrays {
+  public static void main(String[] args) {
+      String name = "shubhamsonar";
+      String n = name.substring(0,7); 
+      System.out.println(n);
+     
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
