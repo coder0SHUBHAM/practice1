@@ -76,6 +76,36 @@ public class DecimalToBinarySimple {
     }
 }
 
+//Write 2 functions => decimalToBinary() & binaryToDecimal() to convert a number from one number system to another
+
+import java.util.*;
+class main {
+
+    public static String DecimalToBinary(int decimal) {
+        return Integer.toBinaryString(decimal);
+        
+    }
+    public static int BinaryToDecimal(String binary) {
+                 return Integer.parseInt(binary,2);
+             }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter decimal");
+        int decimal = sc.nextInt();
+        String result1 = DecimalToBinary(decimal);
+        System.out.println(result1);
+
+        System.out.println("Enetr binary");
+        String binary = sc.next();
+        int result2 = BinaryToDecimal(binary);
+         System.out.println(result2);
+    }
+    
+}
+
+
+
+
 
 
 
