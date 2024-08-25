@@ -1,0 +1,98 @@
+// inheritance : properties of  one class derived(transfer) to another class 
+// ***************************** single level inheritance  ******************************** 
+
+class  Shape {           // base class 
+    String color; // property
+}
+
+class squre extends Shape {   //derived class 
+    public void info() {
+        System.out.println(this.color);
+    }
+
+}
+
+class main {
+    public static void main(String[] args) {
+        squre s = new squre();
+        s.color = "red";
+        s.info();
+    }
+}
+
+
+
+// ******************************** multilevel inheritance ********************************
+//multilevel inheritance : multiple classes extends derived classes
+
+class  Shape {// base class 
+    String color; // property
+}
+
+class squre extends Shape { //derived class 
+    public void info() {
+        System.out.println(this.color);
+    }
+
+}
+
+class circle extends squre { // this class extends derived class
+    public void info() {
+        System.out.println(this.color);
+    }
+}
+
+class main {
+    public static void main(String[] args) {
+        squre s = new squre();
+        s.color = "red";
+        s.info();
+        circle c = new circle();
+        c.color = "blue";
+        c.info();
+    }
+}
+
+
+
+//hierarchical inheritance : multiple classes extends base class
+
+// ******************************** hierarchical inheritance ********************************
+class  Shape {// base class 
+    String color; // property
+}
+
+class squre extends Shape { //derived class 
+    public void info() {
+        System.out.println(this.color);
+    }
+
+}
+
+class circle extends Shape { // this class extends base class
+    public void info() {
+        System.out.println(this.color);
+    }
+}
+
+class main {
+    public static void main(String[] args) {
+        squre s = new squre();
+        s.color = "red";
+        s.info();
+        circle c = new circle();
+        c.color = "blue";
+        c.info();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
