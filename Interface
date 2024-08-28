@@ -1,0 +1,52 @@
+// using interface
+import java.util.*;
+
+interface bank {
+    float interest(float A,  float T);
+}
+
+class BOI implements bank {
+    float R=10;
+    public float interest(float A,  float T) {
+        return (A * R * T) / 100;
+    }
+}
+
+class HDFC implements bank {
+    float R = 12;
+    public float interest(float A, float T) {
+        return (A*R*T) / 100;
+    }
+}
+class BOM implements bank {
+    float R = 8;
+    public float interest(float A, float T) {
+        return (A*R*T) / 100;
+    }
+}
+
+
+
+public class demo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the amount and time");
+        float A = sc.nextFloat();
+        
+        float T = sc.nextFloat();
+
+        bank si = new BOI();
+        float a = si.interest(A, T);
+        System.out.println("interest of BOI is : " + a);
+        
+        bank b = new HDFC();
+        float c = b.interest(A,T);
+        System.out.println("interest of HDFC is : " + c);
+        
+         bank m = new BOM();
+        float d = m.interest(A,T);
+        System.out.print("interest of BOM is : " + d);
+        
+    }
+}
+
