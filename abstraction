@@ -1,0 +1,23 @@
+// if class is abstract then can not be create object of that class
+// abstract means hiding  data
+abstract class Animal {
+    abstract void sound();
+
+    void sleep() {
+        System.out.println("The animal is sleeping");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("The dog is barking");
+    }
+}
+
+public class demo {
+    public static void main(String[] args) {
+        Dog d = new Dog(); 
+        d.sound();         
+        d.sleep();         
+    }
+}
