@@ -1,0 +1,51 @@
+// Encapsulation : use public,private,protected access modifier to hide data 
+ //                : for private use getter and setter
+
+class BankAccount {
+    // Private data members
+    private String accountNumber;
+    private float balance;
+
+    // Constructor
+    public BankAccount(String accountNumber, float balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    // Public getter method for account number
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    // Public getter method for balance
+    public float getBalance() {
+        return balance;
+    }
+
+    // Public method to deposit money
+    public void deposit(float amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    // Public method to withdraw money
+    public void withdraw(float amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+}
+
+public class test {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("12345", 1000.0f);
+
+        // Accessing and modifying the balance using public methods
+        account.deposit(500.0f);
+        account.withdraw(200.0f);
+
+        System.out.println("Account Number: " + account.getAccountNumber());
+        System.out.println("Balance: " + account.getBalance());
+    }
+}
