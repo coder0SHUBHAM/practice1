@@ -1,0 +1,19 @@
+// Exception handling using try-catch method
+  class cal1 {
+   static String name;
+
+}
+public class cal {
+    public static void main(String[] args) {
+   
+  try {
+   int [] num = {1,2,3};
+   System.out.println(num[5]);
+  } catch (Exception e) {
+    System.out.println("invalid index ");
+  } finally {
+    System.out.println("FINALLY EXECUTED");
+  }
+
+    }
+}
